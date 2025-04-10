@@ -1,5 +1,0 @@
-
-#Refactoring of code before testing:
-
-1. Write second test 1hr
-2. Create UI interface using JavaFX 1hr

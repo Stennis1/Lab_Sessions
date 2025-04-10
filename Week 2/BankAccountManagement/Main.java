@@ -8,7 +8,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         MainUI ui = new MainUI();
-        Scene scene = new Scene(ui, 800, 600);
+        Scene scene = new Scene(ui, 1200, 900);
 
         primaryStage.setTitle("AmaliTech Banking App");
         primaryStage.setScene(scene);
