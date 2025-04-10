@@ -1,0 +1,16 @@
+
+#Refactoring of code before testing:
+
+##CurrentAccount class:
+Variable 'overdraftLimit' is assigned to itself
+
+    @Override
+    public void printLastNTransactions(int n) {
+        TransactionNode current = transactionHistoryHead;
+        int count = 0;
+        while (current != null && count < n) {
+            System.out.println(current);
+            current = current.next;
+            count++;
+        }
+    }

@@ -3,16 +3,24 @@ import java.util.Arrays;
 
 public class StudentScoresAnalysis {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Create scanner to read input
 
+        // Get number of students from user input 
         int N = getNumberOfStudents(scanner);
-        int[] scores = getScores(scanner, N);
-        scanner.close();
 
+        // Get the scores/grades of students 
+        int[] scores = getScores(scanner, N);
+
+        scanner.close(); // Close scanner 
+
+        // Display statistics: max, min, and average 
         displayStatistics(scores);
+
+        // Display graph of scores
         displayGraph(scores);
     }
 
+    // Method to read and validate number of students 
     private static int getNumberOfStudents(Scanner scanner) {
         int N;
         while (true) {
@@ -25,6 +33,7 @@ public class StudentScoresAnalysis {
         }
     }
 
+    // Method to get scores/grades of students from the user 
     private static int[] getScores(Scanner scanner, int N) {
         int[] scores = new int[N];
         System.out.println("Enter all grades (0-100): ");
@@ -52,6 +61,7 @@ public class StudentScoresAnalysis {
         return scores;
     }
 
+    // Method to display the statistics: max, min, and average 
     private static void displayStatistics(int[] scores) {
         int maxGrade = Arrays.stream(scores).max().orElse(0);
         int minGrade = Arrays.stream(scores).min().orElse(0);
@@ -63,8 +73,11 @@ public class StudentScoresAnalysis {
         System.out.printf("The average grade is %.2f\n", averageGrade);
     }
 
+    // Method to display graph of scores/grades
     private static void displayGraph(int[] scores) {
         int[] stats = new int[5];
+
+        // Count number of scores/grades in each range 
         for (int grade : scores) {
             if (grade >= 0 && grade <= 20) stats[0]++; 
             else if (grade <= 40) stats[1]++;
@@ -73,9 +86,10 @@ public class StudentScoresAnalysis {
             else stats[4]++;
         }
 
-        int maxHeight = Arrays.stream(stats).max().orElse(0);
+        int maxHeight = Arrays.stream(stats).max().orElse(0); // Get tallest column height 
         System.out.println("\nGraph:\n");
 
+        // Draw the graph from top to bottom 
         for (int row = maxHeight; row > 0; row--) {
             System.out.printf(" %2d > ", row);
             for (int count : stats) {
@@ -85,7 +99,7 @@ public class StudentScoresAnalysis {
         }
         
         System.out.println("    +-----------+-----------+----------+----------+----------+");
-        System.out.println("    I    0-20   I   21-40   I   41-60   I   61-80   I   81-100  I");
+        System.out.println("    I    0-20   I   21-40   I   41-60  I   61-80  I  81-100  I");
 
     }    
 }
