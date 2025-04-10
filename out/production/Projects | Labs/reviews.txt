@@ -1,16 +1,10 @@
 
 #Refactoring of code before testing:
 
-##CurrentAccount class:
-Variable 'overdraftLimit' is assigned to itself
+1. Print transaction list functionality 45min
+2. Implement overloading 15min
+3. Write second test 1hr
+Time Period:
 
-    @Override
-    public void printLastNTransactions(int n) {
-        TransactionNode current = transactionHistoryHead;
-        int count = 0;
-        while (current != null && count < n) {
-            System.out.println(current);
-            current = current.next;
-            count++;
-        }
-    }
+4. Create UI interface using JavaFX
+Time period:

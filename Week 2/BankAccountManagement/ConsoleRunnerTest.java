@@ -14,9 +14,15 @@ public class ConsoleRunnerTest {
         System.out.println("Current Balance: " + savings.getBalance());
         savings.printLastNTransactions(5);
 
+        // Test to check for overloading
+        System.out.println();
+        savings.deposit(500.00, "MasterCard");
+
+
+        // Create a Current Account and perform operations
         System.out.println("\n");
         System.out.println("Test cases for Current Account");
-        // Create a Current Account and perform operations
+
         BankAccount current = new CurrentAccount("GCB-002", "Emmanuel White",
                 500.00, 1000.00);
         current.withdraw(500.00);
@@ -25,10 +31,10 @@ public class ConsoleRunnerTest {
         System.out.println("Current Balance: " + current.getBalance());
         current.printLastNTransactions(5);
 
-
+        // Create a Fixed Deposit Account and perform operations
         System.out.println("\n");
         System.out.println("Test cases for Fixed Account");
-        // Create a Fixed Deposit Account and perform operations
+
         BankAccount fixedDeposit = new FixedDepositAccount("GCB-003", "Roger Satsi",
                 3000.00, LocalDate.now().minusDays(1)); // Maturity date set to yesterday
         fixedDeposit.withdraw(2500.00); // Withdrawal allowed
@@ -42,5 +48,6 @@ public class ConsoleRunnerTest {
         fixedDepositLocked.withdraw(2000); // Withdrawal declined
         System.out.println("Current Balance: " + fixedDepositLocked.getBalance());
         savings.printLastNTransactions(5);
+
     }
 }

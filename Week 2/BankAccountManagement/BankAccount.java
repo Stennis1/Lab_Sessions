@@ -21,6 +21,12 @@ public abstract class BankAccount implements BankOperations {
             addTransaction("Deposit: ", amount); // Calls addTransaction method
         }
     }
+
+    // Overloaded deposit method
+    public  void deposit(double amount, String mode) {
+        balance += amount;
+        System.out.println("Deposited: " + amount + " via " + mode);
+    }
     
     
     protected void addTransaction(String type, double amount) {
