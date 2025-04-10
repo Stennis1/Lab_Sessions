@@ -12,7 +12,7 @@ public class CurrentAccount extends BankAccount {
     public void withdraw(double amount) {
         if (balance + overdraftLimit >= amount) {
             balance -= amount;
-            addTransaction("Withdraw: ", amount);
+            addTransaction("Withdraw: ", amount, balance);
         } else {
             System.out.println("Overdraft limit exceeded!");
         }

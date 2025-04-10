@@ -18,7 +18,7 @@ public abstract class BankAccount implements BankOperations {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-            addTransaction("Deposit: ", amount); // Calls addTransaction method
+            addTransaction("Deposit: ", amount, balance); // Calls addTransaction method
         }
     }
 
@@ -29,8 +29,8 @@ public abstract class BankAccount implements BankOperations {
     }
     
     
-    protected void addTransaction(String type, double amount) {
-        TransactionNode newNode = new TransactionNode(type, amount);
+    protected void addTransaction(String type, double amount, double postBalance) {
+        TransactionNode newNode = new TransactionNode(type, amount, postBalance);
         newNode.next = transactionHistoryHead;
         transactionHistoryHead = newNode;
     }

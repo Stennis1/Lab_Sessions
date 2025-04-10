@@ -6,7 +6,7 @@ public class TransactionNode {
     double postBalance;
     TransactionNode next;
 
-    public TransactionNode(String type,double amount) {
+    public TransactionNode(String type, double amount, double postBalance) {
         this.type = type;
         this.amount = amount;
         this.postBalance = postBalance;
@@ -15,6 +15,6 @@ public class TransactionNode {
 
     @Override
     public String toString() {
-        return type + amount;
+        return type + amount + " | Balance after: " + postBalance;
     }
 }

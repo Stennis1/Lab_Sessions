@@ -9,6 +9,7 @@ public class ConsoleRunnerTest {
         BankAccount savings = new SavingsAccount("GCB-001", "Stennis Smith",
                 500.00);
         savings.deposit(500.00);    // Deposit 500.00
+        System.out.println("Balance after deposit: " + savings.balance);
         savings.withdraw(500.00);   // Withdraw 500.00
         savings.withdraw(3500.00);
         System.out.println("Current Balance: " + savings.getBalance());

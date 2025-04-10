@@ -15,7 +15,7 @@ public class FixedDepositAccount extends BankAccount {
         if (LocalDate.now().isAfter(maturityDate)) {
             if (amount <= balance) {
                 balance -= amount;
-                addTransaction("Withdraw: ", amount);
+                addTransaction("Withdraw: ", amount, balance);
             } else {
                 System.out.println("Insufficient balance!");
             }

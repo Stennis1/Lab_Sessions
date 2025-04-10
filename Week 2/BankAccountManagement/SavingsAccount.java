@@ -11,7 +11,7 @@ public class SavingsAccount extends BankAccount {
     public void withdraw(double amount) {
         if (balance - amount >= MIN_BALANCE) {
             balance -= amount;
-            addTransaction("Withdraw: ", amount);
+            addTransaction("Withdraw: ", amount, balance);
         } else {
             System.out.println("Insufficient balance! You don't have enough funds in your account to withdraw!");
         }

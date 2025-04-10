@@ -1,10 +1,5 @@
 
 #Refactoring of code before testing:
 
-1. Print transaction list functionality 45min
-2. Implement overloading 15min
-3. Write second test 1hr
-Time Period:
-
-4. Create UI interface using JavaFX
-Time period:
+1. Write second test 1hr
+2. Create UI interface using JavaFX 1hr
