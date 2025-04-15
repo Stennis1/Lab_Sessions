@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df1d5e1f-1482-4bad-a06b-7bdff1a79ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeePerformance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeSalary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/view/EmployeeUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects | Labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projects | Labs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 2/BankAccountManagement/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 2/BankAccountManagement/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/MainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/MainUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
