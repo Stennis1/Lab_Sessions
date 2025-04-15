@@ -9,11 +9,11 @@ import javafx.util.Callback;
 import java.time.LocalDate;
 
 public class MainUI extends VBox {
-    private ComboBox<String> accountTypeBox;
-    private TextField accountNumberField, nameField, balanceField, overdraftField;
-    private DatePicker maturityPicker;
-    private Button createBtn, depositBtn, withdrawBtn;
-    private TextField amountField;
+    private final ComboBox<String> accountTypeBox;
+    private final TextField accountNumberField, nameField, balanceField, overdraftField;
+    private final DatePicker maturityPicker;
+    private final Button createBtn, depositBtn, withdrawBtn;
+    private  final TextField amountField;
 
     private TableView<TransactionNode> transactionTable;
     private ObservableList<TransactionNode> transactionList = FXCollections.observableArrayList();
