@@ -78,7 +78,7 @@ public class Employee<T> implements Comparable<Employee<T>> {
 
     @Override
     public int compareTo(Employee<T> other) {
-        return Integer.compare(other.yearsOfExperience, this.yearsOfExperience);
+        return Integer.compare(other.getYearsOfExperience(), this.yearsOfExperience);
     }
 
     @Override

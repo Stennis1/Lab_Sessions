@@ -59,4 +59,29 @@ public class EmployeeDatabase<T> {
         return new ArrayList<>(employeeMap.values());
     }
 
+    // Search by Fields
+    public List<Employee<T>> searchByDepartment(String department) {
+        return employeeMap.values().stream().filter(
+                emp -> emp.getDepartment().equalsIgnoreCase(department)).toList();
+    }
+
+    public List<Employee<T>> searchByName(String keyword) {
+        return employeeMap.values().stream().filter(
+                emp -> emp.getName().toLowerCase().contains(keyword.toLowerCase())).toList();
+    }
+
+    public List<Employee<T>> filterByPerformance(double minRating) {
+        return employeeMap.values().stream().filter(
+                emp -> emp.getPerformanceRating() >= minRating).toList();
+    }
+
+    public List<Employee<T>> filterBySalaryRange(double minSalary, double maxSalary) {
+        return employeeMap.values().stream().filter(
+                emp -> emp.getSalary() >= minSalary && emp.getSalary() <= maxSalary).toList();
+    }
+
+    public Iterator<Employee<T>> getEmployeeIterator() {
+        return employeeMap.values().iterator();
+    }
+
 }
