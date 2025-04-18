@@ -10,7 +10,7 @@ public class Employee<T> implements Comparable<Employee<T>> {
     private boolean isActive;
 
     public Employee(T employeeId, String name, String department, double salary,
-                    double performanceRating, int yearsOfExperience, boolean isActive){
+                    double performanceRating, int yearsOfExperience, boolean isActive) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
@@ -20,6 +20,7 @@ public class Employee<T> implements Comparable<Employee<T>> {
         this.isActive = isActive;
     }
 
+    // Getters and setters
     public T getEmployeeId() {
         return employeeId;
     }
@@ -76,15 +77,22 @@ public class Employee<T> implements Comparable<Employee<T>> {
         isActive = active;
     }
 
+    // For sorting by years of experience (descending)
     @Override
     public int compareTo(Employee<T> other) {
-        return Integer.compare(other.getYearsOfExperience(), this.yearsOfExperience);
+        return Integer.compare(other.getYearsOfExperience(), this.getYearsOfExperience());
     }
 
     @Override
     public String toString() {
-        return String.format("ID: %-10s, | Name: %-15s | Dept: %-10s | Salary: %-10.2f | Rating: %-3.1f | Exp: %-2d yrs | Active %b",
-                employeeId, name, department, salary, performanceRating, yearsOfExperience, isActive);
+        return "Employee{" +
+                "ID=" + employeeId +
+                ", Name='" + name + '\'' +
+                ", Department='" + department + '\'' +
+                ", Salary=" + salary +
+                ", Rating=" + performanceRating +
+                ", Experience=" + yearsOfExperience +
+                ", Active=" + isActive +
+                '}';
     }
-
 }

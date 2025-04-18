@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df1d5e1f-1482-4bad-a06b-7bdff1a79ef8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeePerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeePerformanceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeSalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/EmployeeSalaryComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/model/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/view/EmployeeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/EmployeeManagementSystem/view/EmployeeManagementUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/EmployeeDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/EmployeeDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/EmployeePerformance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/EmployeeSalary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/model/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projects | Labs/EmployeeManagementSystem/view/EmployeeUI.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +58,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.BankAppConsoleTest.executor": "Run",
     "Application.ConsoleRunnerTest.executor": "Run",
+    "Application.EmployeeM.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.RunBankApp.executor": "Run",
     "Application.RunJavaFX.executor": "Run",
@@ -66,7 +81,15 @@
       <recent name="$PROJECT_DIR$/Week 2/BankAccountManagement" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EmployeeM">
+    <configuration name="EmployeeM" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="EmployeeManagementSystem.Main" />
+      <module name="Projects | Labs" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/javafx/javafx-sdk-21.0.2/lib --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunBankApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Projects | Labs" />
@@ -75,6 +98,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.RunBankApp" />
+      <item itemvalue="Application.EmployeeM" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

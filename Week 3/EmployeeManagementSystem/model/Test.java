@@ -49,37 +49,72 @@ public class Test {
         db.removeEmployee(103);
 
         // Print after update and removal
-        System.out.println("\nUpdated Employee List:");
+        System.out.println("\n Updated Employee List:");
         for (Employee<Integer> e : db.getAllEmployees()) {
             System.out.println(e);
         }
 
-        System.out.println("\n🔍 Employees in IT Department:");
+        System.out.println("\n Employees in IT Department:");
         for (Employee<Integer> emp : db.searchByDepartment("IT")) {
             System.out.println(emp);
         }
 
-        System.out.println("\n🔍 Employees with Name containing 'Ali':");
+        System.out.println("\n Employees with Name containing 'Ali':");
         for (Employee<Integer> emp : db.searchByName("Ali")) {
             System.out.println(emp);
         }
 
-        System.out.println("\n🔍 Employees with Rating ≥ 4.5:");
+        System.out.println("\n Employees with Rating ≥ 4.5:");
         for (Employee<Integer> emp : db.filterByPerformance(4.5)) {
             System.out.println(emp);
         }
 
-        System.out.println("\n🔍 Employees with Salary between $60,000 and $90,000:");
+        System.out.println("\n Employees with Salary between $60,000 and $90,000:");
         for (Employee<Integer> emp : db.filterBySalaryRange(60000, 90000)) {
             System.out.println(emp);
         }
 
         // Using Iterator
-        System.out.println("\n🔁 Traversing All Employees using Iterator:");
+        System.out.println("\n Traversing All Employees using Iterator:");
         Iterator<Employee<Integer>> iterator = db.getEmployeeIterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        System.out.println("\n Sorted by Years of Experience (Comparable):");
+        List<Employee<Integer>> sortedByExperience = db.getAllEmployees();
+        Collections.sort(sortedByExperience);
+        for (Employee<Integer> emp : sortedByExperience) {
+            System.out.println(emp);
+        }
+
+        System.out.println("\n Sorted by Salary (Comparator):");
+        List<Employee<Integer>> sortedBySalary = db.getAllEmployees();
+        sortedBySalary.sort(new EmployeeSalaryComparator<>());
+        for (Employee<Integer> emp : sortedBySalary) {
+            System.out.println(emp);
+        }
+
+        System.out.println("\n Sorted by Performance Rating (Comparator):");
+        List<Employee<Integer>> sortedByPerformance = db.getAllEmployees();
+        sortedByPerformance.sort(new EmployeePerformanceComparator<>());
+        for (Employee<Integer> emp : sortedByPerformance) {
+            System.out.println(emp);
+        }
+
+        System.out.println("\n Giving 10% Raise to Employees with Rating ≥ 4.5");
+        db.giveRaiseToHighPerformers(4.5, 10);
+
+        System.out.println("\n Top 2 Highest-Paid Employees:");
+        List<Employee<Integer>> topPaid = db.getTopPaidEmployees(2);
+        for (Employee<Integer> emp : topPaid) {
+            System.out.println(emp);
+        }
+
+        System.out.println("\n Average Salary in IT Department:");
+        double avgSalaryIT = db.getAverageSalaryByDepartment("IT");
+        System.out.printf("Average Salary in IT: $%.2f\n", avgSalaryIT);
+
 
     }
 }
