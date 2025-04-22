@@ -3,24 +3,18 @@ import java.util.Arrays;
 
 public class StudentScoresAnalysis {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Create scanner to read input
+        Scanner scanner = new Scanner(System.in);
 
-        // Get number of students from user input 
         int N = getNumberOfStudents(scanner);
-
-        // Get the scores/grades of students 
         int[] scores = getScores(scanner, N);
 
-        scanner.close(); // Close scanner 
+        scanner.close();
 
-        // Display statistics: max, min, and average 
         displayStatistics(scores);
 
-        // Display graph of scores
         displayGraph(scores);
     }
 
-    // Method to read and validate number of students 
     private static int getNumberOfStudents(Scanner scanner) {
         int N;
         while (true) {
@@ -33,7 +27,6 @@ public class StudentScoresAnalysis {
         }
     }
 
-    // Method to get scores/grades of students from the user 
     private static int[] getScores(Scanner scanner, int N) {
         int[] scores = new int[N];
         System.out.println("Enter all grades (0-100): ");
@@ -61,7 +54,7 @@ public class StudentScoresAnalysis {
         return scores;
     }
 
-    // Method to display the statistics: max, min, and average 
+
     private static void displayStatistics(int[] scores) {
         int maxGrade = Arrays.stream(scores).max().orElse(0);
         int minGrade = Arrays.stream(scores).min().orElse(0);
@@ -73,11 +66,10 @@ public class StudentScoresAnalysis {
         System.out.printf("The average grade is %.2f\n", averageGrade);
     }
 
-    // Method to display graph of scores/grades
+
     private static void displayGraph(int[] scores) {
         int[] stats = new int[5];
 
-        // Count number of scores/grades in each range 
         for (int grade : scores) {
             if (grade >= 0 && grade <= 20) stats[0]++; 
             else if (grade <= 40) stats[1]++;
