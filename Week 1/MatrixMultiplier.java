@@ -13,7 +13,7 @@ public class MatrixMultiplier {
 
         // Check matrix multiplication compatibility
         if (colA != rowB) {
-            System.out.println(" Matrix multiplication not possible. Columns of A must equal rows of B.");
+            System.out.println("Matrix multiplication not possible. Columns of A must equal rows of B.");
             return;
         }
 
@@ -44,7 +44,7 @@ public class MatrixMultiplier {
                 return num;
             }
             System.out.println("Invalid input. Please enter a valid integer.");
-            scanner.next(); // clear invalid input
+            scanner.next();
         }
     }
 
@@ -62,7 +62,6 @@ public class MatrixMultiplier {
         }
     }
 
-    // Method to multiply two matrices
     private static int[][] multiplyMatrix(int[][] A, int[][] B) {
         int rowsA = A.length;
         int colsA = A[0].length;
@@ -77,17 +76,19 @@ public class MatrixMultiplier {
                 }
             }
         }
-
         return result;
     }
 
-    // Method to display a matrix
     private static void displayMatrix(int[][] matrix) {
         for (int[] row : matrix) {
-            for (int val : row) {
-                System.out.printf("%5d", val);
+            System.out.print("| ");
+            for (int j = 0; j < row.length; j++) {
+                System.out.printf("%2d", row[j]);
+                if (j < row.length - 1) {
+                    System.out.print(" ");
+                }
             }
-            System.out.println();
+            System.out.println(" |");
         }
     }
 }
